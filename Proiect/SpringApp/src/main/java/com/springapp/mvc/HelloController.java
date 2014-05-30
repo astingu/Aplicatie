@@ -176,8 +176,8 @@ public class HelloController{
             long difference = cal.getTimeInMillis() - list.get(i).getCurrentDate().getTime();
 
              /* daca diferenta dintre momentul curent si momentul in care s-a realizat salvarea in baza de date
-             * este mai mare de 15 minute, se sterge din abza de date */
-            if (difference > 300000) {
+             * este mai mare de 15 minute (900000 milisecunde), se sterge din abza de date */
+            if (difference > 900000) {
 
                 mainService.deleteMovie(list.get(i));
 
